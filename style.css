@@ -1,0 +1,41 @@
+body {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.spacer {
+  height: 100px;
+}
+
+.click-this {
+  background-color: rgb(97, 190, 170);
+  color: white;
+  padding: 50px;
+  border-radius: 10px;
+  transition: all .5s ease;
+}
+
+.click-this:hover {
+  background-color: rgb(110, 209, 188);
+  cursor: pointer;
+}
+
+.tied {
+  color: orange;
+  font-size: 100px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.lost {
+  color: red;
+  font-size: 100px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.won {
+  color: rgb(27, 216, 27);
+  font-size: 100px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
