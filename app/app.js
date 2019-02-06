@@ -24,20 +24,24 @@ function play(playersChoice) {
       document.getElementById('result').innerHTML = `You played <b>${playersChoice}</b>, the computer played <b>${compPlay}</b>. <h1 class="lost"><i class="far fa-times-circle"></i></h1> You lost!`
     } else {
       playerScore++;
-      document.getElementById('result').innerHTML = `You played <b>${playersChoice}</b>, the computer played <b>${compPlay}</b>. <h1 class="won"><i class="far fa-check-circle"></i></h1> You won!`
+      document.getElementById('result').innerHTML = `You played <b>${playersChoice}</b>, the computer played <b>${compPlay}</b>. <h1 class="won"><i class="far fa-check-circle"></i></h1> You win!`
     }
   } else if (playersChoice == paper) {
     if (compPlay == 'rock') {
+      playerScore++;
       document.getElementById('result').innerHTML = `You played <b>${playersChoice}</b>, the computer played <b>${compPlay}</b>. <h1 class="won"><i class="far fa-check-circle"></i></h1> You win!`
     } else if (compPlay == 'paper') {
       document.getElementById('result').innerHTML = `You played <b>${playersChoice}</b>, the computer played <b>${compPlay}</b>. <h1 class="tied"><i class="far fa-dot-circle"></i></h1> It's a draw!`
     } else {
+      computerScore++;
       document.getElementById('result').innerHTML = `You played <b>${playersChoice}</b>, the computer played <b>${compPlay}</b>. <h1 class="lost"><i class="far fa-times-circle"></i></h1> You lost!`
     }
   } else if (playersChoice == scissors) {
     if (compPlay == 'rock') {
+      computerScore++;
       document.getElementById('result').innerHTML = `You played <b>${playersChoice}</b>, the computer played <b>${compPlay}</b>. <h1 class="lost"><i class="far fa-times-circle"></i></h1> You lost!`
     } else if (compPlay == 'paper') {
+      playerScore++;
       document.getElementById('result').innerHTML = `You played <b>${playersChoice}</b>, the computer played <b>${compPlay}</b>. <h1 class="won"><i class="far fa-check-circle"></i></h1> You win!`
     } else {
       document.getElementById('result').innerHTML = `You played <b>${playersChoice}</b>, the computer played <b>${compPlay}</b>. <h1 class="tied"><i class="far fa-dot-circle"></i></h1> It's a draw!`
