@@ -10,6 +10,9 @@ let cChoices = {
   scissors: 'Scissors'
 }
 
+var playerScore = 0;
+var computerScore = 0;
+
 
 function play(playersChoice) {
   let compPlay = compChoice()
@@ -17,8 +20,10 @@ function play(playersChoice) {
     if (compPlay == 'rock') {
       document.getElementById('result').innerHTML = `You played <b>${playersChoice}</b>, the computer played <b>${compPlay}</b>. <h1 class="tied"><i class="far fa-dot-circle"></i></h1> It's a draw!`
     } else if (compPlay == 'paper') {
+      computerScore++;
       document.getElementById('result').innerHTML = `You played <b>${playersChoice}</b>, the computer played <b>${compPlay}</b>. <h1 class="lost"><i class="far fa-times-circle"></i></h1> You lost!`
     } else {
+      playerScore++;
       document.getElementById('result').innerHTML = `You played <b>${playersChoice}</b>, the computer played <b>${compPlay}</b>. <h1 class="won"><i class="far fa-check-circle"></i></h1> You won!`
     }
   } else if (playersChoice == paper) {
@@ -38,6 +43,7 @@ function play(playersChoice) {
       document.getElementById('result').innerHTML = `You played <b>${playersChoice}</b>, the computer played <b>${compPlay}</b>. <h1 class="tied"><i class="far fa-dot-circle"></i></h1> It's a draw!`
     }
   }
+  updateScores()
 }
 
 
@@ -48,7 +54,9 @@ function compChoice() {
   return compPlay
 }
 
-
+function updateScores() {
+  document.getElementById('score').innerHTML = `Your score is <b>${playerScore}</b>. The computer's score is <b>${computerScore}</b>.`
+}
 
 
 
